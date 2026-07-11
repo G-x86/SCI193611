@@ -25,8 +25,12 @@ def buyLotsOfFruit(orderList):
 
     Returns cost of order
     """
-    totalCost = 0.0
     "*** YOUR CODE HERE ***"
+    totalCost = 0.0
+    try:
+        totalCost = sum([ fruitPrices[x] * y for x,y in orderList  ])
+    except KeyError as e:
+        print(e)
     return totalCost
 
 
